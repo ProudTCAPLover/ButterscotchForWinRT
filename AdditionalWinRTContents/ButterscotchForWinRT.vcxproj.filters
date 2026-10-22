@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>a9fe39b6-cecc-48e4-8daf-b96308a0cdd6</UniqueIdentifier>
+      <Extensions>ico;bmp;dlg;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;resw;resjson</Extensions>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{d9f9ca96-8c89-4dd6-bb0e-9767942fd2ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\vendor">
+      <UniqueIdentifier>{a7ddf63c-87fd-4cd4-91fa-27e2a70000db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\winrt">
+      <UniqueIdentifier>{c8a5e21c-752b-43a0-bade-dfe134b8ff21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\physics">
+      <UniqueIdentifier>{e7a5eab5-2e5c-4b1b-89c3-283d9df85f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\image">
+      <UniqueIdentifier>{40d1a69e-7c13-4a1c-be39-14bf8c03f631}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ButterscotchForWinRT.cpp" />
+    <ClCompile Include="CubeRenderer.cpp" />
+    <ClCompile Include="Direct3DBase.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="core\src\binary_reader.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\data_win.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\data_win_print.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\debug_overlay.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\event_table.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\physics\physics.c">
+      <Filter>core\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\physics\disabled\physics_disabled.c">
+      <Filter>core\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\winrt\winrt_log.c">
+      <Filter>core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\winrt\winrt_main.cpp">
+      <Filter>core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\winrt\winrt_platform.cpp">
+      <Filter>core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\gettime.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\gml_array.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\gml_method.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\ini.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\input_recording.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\instance.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\int_int_hashmap.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\int_rvalue_hashmap.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\json_reader.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\json_writer.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\log.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\loop.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\noop_renderer.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\overlay_file_system.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\profiler.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\random.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\runner.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\runner_gamepad.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\runner_keyboard.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\runner_mouse.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\spatial_grid.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\stb_ds.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\string_builder.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\vm.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\vm_builtins.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\embedded\stb_impl.c">
+      <Filter>core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\md5\md5.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\base64\base64.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\miniz\miniz.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\miniz\miniz_tdef.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\miniz\miniz_tinfl.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\bzip2\bz_internal_error.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\bzip2\bzlib.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\bzip2\crctable.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\bzip2\decompress.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\bzip2\huffman.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\bzip2\randtable.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vendor\sha1\sha1.c">
+      <Filter>core\vendor</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\noop_audio_system.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\noop_file_system.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\video\null_video.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\winrt\d3d11_renderer.cpp">
+      <Filter>core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\image\image_decoder.c">
+      <Filter>core\image</Filter>
+    </ClCompile>
+    <ClCompile Include="core\src\winrt\xaudio2_audio_system.cpp">
+      <Filter>core\winrt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ButterscotchForWinRT.h" />
+    <ClInclude Include="CubeRenderer.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="Direct3DBase.h" />
+    <ClInclude Include="BasicTimer.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="core\src\winrt\winrt_platform.h">
+      <Filter>core\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\winrt\d3d11_renderer.h">
+      <Filter>core\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\winrt\xaudio2_audio_system.h">
+      <Filter>core\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="core\src\winrt\winrt_log.h">
+      <Filter>core\winrt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SimplePixelShader.hlsl" />
+    <FxCompile Include="SimpleVertexShader.hlsl" />
+    <FxCompile Include="SpritePixelShader.hlsl" />
+    <FxCompile Include="SpriteVertexShader.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Logo.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Assets\WideLogo.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ButterscotchForWinRT_TemporaryKey.pfx" />
+  </ItemGroup>
+</Project>

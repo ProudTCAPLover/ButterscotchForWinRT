@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9922B70A-445A-4CFB-8A1C-82DE02BF7F2A}</ProjectGuid>
+    <RootNamespace>ButterscotchForWinRT</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>CEB764585E3C4566C3B9DDA0494F5DD0FB5E6E1F</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>ButterscotchForWinRT_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; ole32.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(ProjectDir)core\compat\vs2012;$(ProjectDir)core\src;$(ProjectDir)core\src\video;$(ProjectDir)core\src\image;$(ProjectDir)core\src\debug_font;$(ProjectDir)core\vendor\md5;$(ProjectDir)core\vendor\base64;$(ProjectDir)core\vendor\bzip2;$(ProjectDir)core\vendor\miniz;$(ProjectDir)core\vendor\sha1;$(ProjectDir)core\vendor\stb\ds;$(ProjectDir)core\vendor\stb\image;$(ProjectDir)core\vendor\stb\vorbis;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">ENABLE_WAD14;ENABLE_WAD16;ENABLE_WAD17;_CRT_SECURE_NO_WARNINGS;BUTTERSCOTCH_VIDEO_NULL;BUTTERSCOTCH_COMMIT_HASH=\"unknown\";BUTTERSCOTCH_COMMIT_DATE=\"unknown\";NO_STRTOK_R;NO_STRCASECMP;MINIZ_NO_ARCHIVE_APIS;MINIZ_NO_STDIO;ENABLE_NOOP_RENDERER;PLATFORM_WINRT;NO_STRINGS_H;NO_FMIN;NO_FMAX;NO_ROUND;NO_LOG2;NO_LROUND;NO_ROUNDF;snprintf=_snprintf;vsnprintf=_vsnprintf;ENABLE_PHYSICS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">ENABLE_WAD14;ENABLE_WAD16;ENABLE_WAD17;_CRT_SECURE_NO_WARNINGS;BUTTERSCOTCH_VIDEO_NULL;BUTTERSCOTCH_COMMIT_HASH=\"unknown\";BUTTERSCOTCH_COMMIT_DATE=\"unknown\";NO_STRTOK_R;NO_STRCASECMP;MINIZ_NO_ARCHIVE_APIS;MINIZ_NO_STDIO;ENABLE_NOOP_RENDERER;PLATFORM_WINRT;NO_STRINGS_H;NO_FMIN;NO_FMAX;NO_ROUND;NO_LOG2;NO_LROUND;NO_ROUNDF;snprintf=_snprintf;vsnprintf=_vsnprintf;ENABLE_PHYSICS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ENABLE_WAD14;ENABLE_WAD16;ENABLE_WAD17;_CRT_SECURE_NO_WARNINGS;BUTTERSCOTCH_VIDEO_NULL;BUTTERSCOTCH_COMMIT_HASH=\"unknown\";BUTTERSCOTCH_COMMIT_DATE=\"unknown\";NO_STRTOK_R;NO_STRCASECMP;MINIZ_NO_ARCHIVE_APIS;MINIZ_NO_STDIO;ENABLE_NOOP_RENDERER;PLATFORM_WINRT;NO_STRINGS_H;NO_FMIN;NO_FMAX;NO_ROUND;NO_LOG2;NO_LROUND;NO_ROUNDF;snprintf=_snprintf;vsnprintf=_vsnprintf;ENABLE_PHYSICS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ENABLE_WAD14;ENABLE_WAD16;ENABLE_WAD17;_CRT_SECURE_NO_WARNINGS;BUTTERSCOTCH_VIDEO_NULL;BUTTERSCOTCH_COMMIT_HASH=\"unknown\";BUTTERSCOTCH_COMMIT_DATE=\"unknown\";NO_STRTOK_R;NO_STRCASECMP;MINIZ_NO_ARCHIVE_APIS;MINIZ_NO_STDIO;ENABLE_NOOP_RENDERER;PLATFORM_WINRT;NO_STRINGS_H;NO_FMIN;NO_FMAX;NO_ROUND;NO_LOG2;NO_LROUND;NO_ROUNDF;snprintf=_snprintf;vsnprintf=_vsnprintf;ENABLE_PHYSICS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ENABLE_WAD14;ENABLE_WAD16;ENABLE_WAD17;_CRT_SECURE_NO_WARNINGS;BUTTERSCOTCH_VIDEO_NULL;BUTTERSCOTCH_COMMIT_HASH=\"unknown\";BUTTERSCOTCH_COMMIT_DATE=\"unknown\";NO_STRTOK_R;NO_STRCASECMP;MINIZ_NO_ARCHIVE_APIS;MINIZ_NO_STDIO;ENABLE_NOOP_RENDERER;PLATFORM_WINRT;NO_STRINGS_H;NO_FMIN;NO_FMAX;NO_ROUND;NO_LOG2;NO_LROUND;NO_ROUNDF;snprintf=_snprintf;vsnprintf=_vsnprintf;ENABLE_PHYSICS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ENABLE_WAD14;ENABLE_WAD16;ENABLE_WAD17;_CRT_SECURE_NO_WARNINGS;BUTTERSCOTCH_VIDEO_NULL;BUTTERSCOTCH_COMMIT_HASH=\"unknown\";BUTTERSCOTCH_COMMIT_DATE=\"unknown\";NO_STRTOK_R;NO_STRCASECMP;MINIZ_NO_ARCHIVE_APIS;MINIZ_NO_STDIO;ENABLE_NOOP_RENDERER;PLATFORM_WINRT;NO_STRINGS_H;NO_FMIN;NO_FMAX;NO_ROUND;NO_LOG2;NO_LROUND;NO_ROUNDF;snprintf=_snprintf;vsnprintf=_vsnprintf;ENABLE_PHYSICS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4244;4800;4996;4056;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">4244;4800;4996;4056;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">4244;4800;4996;4056;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4244;4800;4996;4056;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4244;4800;4996;4056;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4244;4800;4996;4056;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Assets\Logo.png" />
+    <Image Include="Assets\SmallLogo.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\SplashScreen.png" />
+    <Image Include="Assets\WideLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ButterscotchForWinRT.h" />
+    <ClInclude Include="core\src\winrt\d3d11_renderer.h" />
+    <ClInclude Include="core\src\winrt\winrt_log.h" />
+    <ClInclude Include="core\src\winrt\winrt_platform.h" />
+    <ClInclude Include="core\src\winrt\xaudio2_audio_system.h" />
+    <ClInclude Include="CubeRenderer.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="Direct3DBase.h" />
+    <ClInclude Include="BasicTimer.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ButterscotchForWinRT.cpp" />
+    <ClCompile Include="core\src\binary_reader.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="core\src\data_win.c" />
+    <ClCompile Include="core\src\data_win_print.c" />
+    <ClCompile Include="core\src\debug_overlay.c" />
+    <ClCompile Include="core\src\embedded\stb_impl.c" />
+    <ClCompile Include="core\src\event_table.c" />
+    <ClCompile Include="core\src\gettime.c" />
+    <ClCompile Include="core\src\gml_array.c" />
+    <ClCompile Include="core\src\gml_method.c" />
+    <ClCompile Include="core\src\image\image_decoder.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)core\src\image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="core\src\ini.c" />
+    <ClCompile Include="core\src\input_recording.c" />
+    <ClCompile Include="core\src\instance.c" />
+    <ClCompile Include="core\src\int_int_hashmap.c" />
+    <ClCompile Include="core\src\int_rvalue_hashmap.c" />
+    <ClCompile Include="core\src\json_reader.c" />
+    <ClCompile Include="core\src\json_writer.c" />
+    <ClCompile Include="core\src\log.c" />
+    <ClCompile Include="core\src\loop.c" />
+    <ClCompile Include="core\src\noop_audio_system.c" />
+    <ClCompile Include="core\src\noop_file_system.c" />
+    <ClCompile Include="core\src\noop_renderer.c" />
+    <ClCompile Include="core\src\overlay_file_system.c" />
+    <ClCompile Include="core\src\physics\disabled\physics_disabled.c" />
+    <ClCompile Include="core\src\physics\physics.c" />
+    <ClCompile Include="core\src\profiler.c" />
+    <ClCompile Include="core\src\random.c" />
+    <ClCompile Include="core\src\runner.c" />
+    <ClCompile Include="core\src\runner_gamepad.c" />
+    <ClCompile Include="core\src\runner_keyboard.c" />
+    <ClCompile Include="core\src\runner_mouse.c" />
+    <ClCompile Include="core\src\spatial_grid.c" />
+    <ClCompile Include="core\src\stb_ds.c" />
+    <ClCompile Include="core\src\string_builder.c" />
+    <ClCompile Include="core\src\video\null_video.c" />
+    <ClCompile Include="core\src\vm.c" />
+    <ClCompile Include="core\src\vm_builtins.c" />
+    <ClCompile Include="core\src\winrt\d3d11_renderer.cpp" />
+    <ClCompile Include="core\src\winrt\winrt_log.c" />
+    <ClCompile Include="core\src\winrt\winrt_main.cpp" />
+    <ClCompile Include="core\src\winrt\winrt_platform.cpp" />
+    <ClCompile Include="core\src\winrt\xaudio2_audio_system.cpp" />
+    <ClCompile Include="core\vendor\base64\base64.c" />
+    <ClCompile Include="core\vendor\bzip2\bzlib.c" />
+    <ClCompile Include="core\vendor\bzip2\bz_internal_error.c" />
+    <ClCompile Include="core\vendor\bzip2\crctable.c" />
+    <ClCompile Include="core\vendor\bzip2\decompress.c" />
+    <ClCompile Include="core\vendor\bzip2\huffman.c" />
+    <ClCompile Include="core\vendor\bzip2\randtable.c" />
+    <ClCompile Include="core\vendor\md5\md5.c" />
+    <ClCompile Include="core\vendor\miniz\miniz.c" />
+    <ClCompile Include="core\vendor\miniz\miniz_tdef.c" />
+    <ClCompile Include="core\vendor\miniz\miniz_tinfl.c" />
+    <ClCompile Include="core\vendor\sha1\sha1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CubeRenderer.cpp" />
+    <ClCompile Include="Direct3DBase.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="SimplePixelShader.hlsl">
+      <ShaderType>Pixel</ShaderType>
+      <ShaderModel>4.0_level_9_1</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SimpleVertexShader.hlsl">
+      <ShaderType>Vertex</ShaderType>
+      <ShaderModel>4.0_level_9_1</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="SpritePixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="SpriteVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ButterscotchForWinRT_TemporaryKey.pfx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
